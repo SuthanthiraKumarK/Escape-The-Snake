@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape the Snake Game</title>
+
+    <link rel="shortcut icon" href="./css/bg_snake.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./css/ETS_game.css">
+</head>
+<body>
+  
+    <!-- Main Window -->
+    <div class="mainWindow">
+    <!-- Header -->
+    <div class="header container-fluid d-flex justify-content-between justify-content-md-around align-items-center mt-1 mb-0">
+
+    <div class="logo d-flex justify-content-center align-items-center ms-md-5">
+     <img src="./css/bg_snake.png" alt="gameLogo" width="40px" height="40px" class="logoImg me-0 mb-3" style="filter: brightness(1.4);">
+     <div class="logoTextField d-flex flex-column justify-content-center align-items-center">
+     <p class="logoTextTop logoText mb-0">Escape</p>
+     <p class="logoTextBottom logoText">The Snakes</p>
+     </div>
+    </div>
+     
+    <div class="pause mb-3 me-md-5">
+     <a href="#" class="pauseButton"><i class="fa-sharp fa-regular fa-lg fa-circle-pause" style="color: #000000;"></i></a> 
+    </div>
+
+    </div>
+
+    <!-- Game Summary -->
+    <div class="summary container-fluid d-flex justify-content-center align-items-center mb-2">
+
+    <div class="emojiField me-2">
+
+    <img src="./images/Emoji Data/a100.png" alt="emoji_Data" class="emojiData img-fluid" width="40px" height="40px">
+
+    </div>
+
+    <div class="progressField d-flex">
+    
+        <div class="progress">
+
+         <div class="progress-bar"></div>
+
+        </div>
+
+    </div>
+    </div>
+
+    <!-- Playing Field -->
+    <div class="playingField container-fluid d-flex flex-column justify-content-center align-items-center">
+
+        <div class="gameBox gameBox10 d-flex justify-content-center align-items-center">
+
+            <div class="parent parent100 d-flex justify-content-center align-items-center"></div>
+            <div class="parent parent99 d-flex justify-content-center align-items-center"></div>
+            <div class="parent parent98 d-flex justify-content-center align-items-center"><p class="bg_num">98</p></div>
+            <div class="parent parent97 d-flex justify-content-center align-items-center"><p class="bg_num">97</p></div>
+            <div class="parent parent96 d-flex justify-content-center align-items-center"><p class="bg_num">96</p></div>
+            <div class="parent parent95 d-flex justify-content-center align-items-center"></div>
+            <div class="parent parent94 d-flex justify-content-center align-items-center"><p class="bg_num">94</p></div>
+            <div class="parent parent93 d-flex justify-content-center align-items-center"><p class="bg_num">93</p></div>
+            <div class="parent parent92 d-flex justify-content-center align-items-center"><p class="bg_num">92</p></div>
+            <div class="parent parent91 d-flex justify-content-center align-items-center"></div>
+              
+             </div>
+
+        <div class="gameBox gameBox9 d-flex justify-content-center align-items-center">
+
+            <div class="parent parent81 d-flex justify-content-center align-items-center"><p class="bg_num">81</p></div>
+            <div class="parent parent82 d-flex justify-content-center align-items-center"><p class="bg_num">82</p></div>
+            <div class="parent parent83 d-flex justify-content-center align-items-center"><p class="bg_num">83</p></div>
+            <div class="parent parent84 d-flex justify-content-center align-items-center"><p class="bg_num">84</p></div>
+            <div class="parent parent85 d-flex justify-content-center align-items-center"><p class="bg_num">85</p></div>
+            <div class="parent parent86 d-flex justify-content-center align-items-center"><p class="bg_num">86</p></div>
+            <div class="parent parent87 d-flex justify-content-center align-items-center"></div>
+            <div class="parent parent88 d-flex justify-content-center align-items-center"><p class="bg_num">88</p></div>
+            <div class="parent parent89 d-flex justify-content-center align-items-center"><p class="bg_num">89</p></div>
+            <div class="parent parent90 d-flex justify-content-center align-items-center"><p class="bg_num">90</p></div>
+              
+             </div>
+
+        <div class="gameBox gameBox8 d-flex justify-content-center align-items-center">
+
+            <div class="parent parent80 d-flex justify-content-center align-items-center"></div>
+            <div class="parent parent79 d-flex justify-content-center align-items-center"><p class="bg_num">79</p></div>
+            <div class="parent parent78 d-flex justify-content-center align-items-center"><p class="bg_num">78</p></div>
+            <div class="parent parent77 d-flex justify-content-center align-items-center"><p class="bg_num">77</p></div>
+            <div class="parent parent76 d-flex justify-content-center align-items-center"><p class="bg_num">76</p></div>
+            <div class="parent parent75 d-flex justify-content-center align-items-center"><p class="bg_num">75</p></div>
+            <div class="parent parent74 d-flex justify-content-center align-items-center"><p class="bg_num">74</p></div>
+            <div class="parent parent73 d-flex justify-content-center align-items-center"><p class="bg_num">73</p></div>
+            <div class="parent parent72 d-flex justify-content-center align-items-center"></div>
+            <div class="parent parent71 d-flex justify-content-center align-items-center"><p class="bg_num">71</p></div>
+              
+             </div>
+
+        <div class="gameBox gameBox7 d-flex justify-content-center align-items-center">
+
+            <div class="parent parent61 d-flex justify-content-center align-items-center"><p class="bg_num">61</p></div>
+            <div class="parent parent62 d-flex justify-content-center align-items-center"><p class="bg_num">62</p></div>
+            <div class="parent parent63 d-flex justify-content-center align-items-center"><p class="bg_num">63</p></div>
+            <div class="parent parent64 d-flex justify-content-center align-items-center"></div>
+            <div class="parent parent65 d-flex justify-content-center align-items-center"><p class="bg_num">65</p></div>
+            <div class="parent parent66 d-flex justify-content-center align-items-center"><p class="bg_num">66</p></div>
+            <div class="parent parent67 d-flex justify-content-center align-items-center"><p class="bg_num">67</p></div>
+            <div class="parent parent68 d-flex justify-content-center align-items-center"><p class="bg_num">68</p></div>
+            <div class="parent parent69 d-flex justify-content-center align-items-center"><p class="bg_num">69</p></div>
+            <div class="parent parent70 d-flex justify-content-center align-items-center"><p class="bg_num">70</p></div>
+              
+             </div>
+
+        <div class="gameBox gameBox6 d-flex justify-content-center align-items-center">
+
+            <div class="parent parent60 d-flex justify-content-center align-items-center"><p class="bg_num">60</p></div>
+            <div class="parent parent59 d-flex justify-content-center align-items-center"><p class="bg_num">59</p></div>
+            <div class="parent parent58 d-flex justify-content-center align-items-center"><p class="bg_num">58</p></div>
+            <div class="parent parent57 d-flex justify-content-center align-items-center"><p class="bg_num">57</p></div>
+            <div class="parent parent56 d-flex justify-content-center align-items-center"><p class="bg_num">56</p></div>
+            <div class="parent parent55 d-flex justify-content-center align-items-center"></div>
+            <div class="parent parent54 d-flex justify-content-center align-items-center"><p class="bg_num">54</p></div>
+            <div class="parent parent53 d-flex justify-content-center align-items-center"><p class="bg_num">53</p></div>
+            <div class="parent parent52 d-flex justify-content-center align-items-center"><p class="bg_num">52</p></div>
+            <div class="parent parent51 d-flex justify-content-center align-items-center"><p class="bg_num">51</p></div>
+              
+             </div>
+
+        <div class="gameBox gameBox5 d-flex justify-content-center align-items-center">
+
+            <div class="parent parent41 d-flex justify-content-center align-items-center"><p class="bg_num">41</p></div>
+            <div class="parent parent42 d-flex justify-content-center align-items-center"></div>
+            <div class="parent parent43 d-flex justify-content-center align-items-center"><p class="bg_num">43</p></div>
+            <div class="parent parent44 d-flex justify-content-center align-items-center"><p class="bg_num">44</p></div>
+            <div class="parent parent45 d-flex justify-content-center align-items-center"><p class="bg_num">45</p></div>
+            <div class="parent parent46 d-flex justify-content-center align-items-center"><p class="bg_num">46</p></div>
+            <div class="parent parent47 d-flex justify-content-center align-items-center"><p class="bg_num">47</p></div>
+            <div class="parent parent48 d-flex justify-content-center align-items-center"><p class="bg_num">48</p></div>
+            <div class="parent parent49 d-flex justify-content-center align-items-center"></div>
+            <div class="parent parent50 d-flex justify-content-center align-items-center"><p class="bg_num">50</p></div>
+              
+             </div>
+
+        <div class="gameBox gameBox4 d-flex justify-content-center align-items-center">
+
+            <div class="parent parent40 d-flex justify-content-center align-items-center"></div>
+            <div class="parent parent39 d-flex justify-content-center align-items-center"><p class="bg_num">39</p></div>
+            <div class="parent parent38 d-flex justify-content-center align-items-center"><p class="bg_num">38</p></div>
+            <div class="parent parent37 d-flex justify-content-center align-items-center"><p class="bg_num">37</p></div>
+            <div class="parent parent36 d-flex justify-content-center align-items-center"><p class="bg_num">36</p></div>
+            <div class="parent parent35 d-flex justify-content-center align-items-center"></div>
+            <div class="parent parent34 d-flex justify-content-center align-items-center"><p class="bg_num">34</p></div>
+            <div class="parent parent33 d-flex justify-content-center align-items-center"><p class="bg_num">33</p></div>
+            <div class="parent parent32 d-flex justify-content-center align-items-center"><p class="bg_num">32</p></div>
+            <div class="parent parent31 d-flex justify-content-center align-items-center"></div>
+              
+             </div>
+
+        <div class="gameBox gameBox3 d-flex justify-content-center align-items-center">
+
+            <div class="parent parent21 d-flex justify-content-center align-items-center"><p class="bg_num">21</p></div>
+            <div class="parent parent22 d-flex justify-content-center align-items-center"><p class="bg_num">22</p></div>
+            <div class="parent parent23 d-flex justify-content-center align-items-center"><p class="bg_num">23</p></div>
+            <div class="parent parent24 d-flex justify-content-center align-items-center"></div>
+            <div class="parent parent25 d-flex justify-content-center align-items-center"><p class="bg_num">25</p></div>
+            <div class="parent parent26 d-flex justify-content-center align-items-center"><p class="bg_num">26</p></div>
+            <div class="parent parent27 d-flex justify-content-center align-items-center"></div>
+            <div class="parent parent28 d-flex justify-content-center align-items-center"><p class="bg_num">28</p></div>
+            <div class="parent parent29 d-flex justify-content-center align-items-center"><p class="bg_num">29</p></div>
+            <div class="parent parent30 d-flex justify-content-center align-items-center"><p class="bg_num">30</p></div>
+         
+             </div>
+
+        <div class="gameBox gameBox2 d-flex justify-content-center align-items-center">
+
+            <div class="parent parent20 d-flex justify-content-center align-items-center"><p class="bg_num">20</p></div>
+            <div class="parent parent19 d-flex justify-content-center align-items-center"></div>
+            <div class="parent parent18 d-flex justify-content-center align-items-center"><p class="bg_num">18</p></div>
+            <div class="parent parent17 d-flex justify-content-center align-items-center"><p class="bg_num">17</p></div>
+            <div class="parent parent16 d-flex justify-content-center align-items-center"><p class="bg_num">16</p></div>
+            <div class="parent parent15 d-flex justify-content-center align-items-center"></div>
+            <div class="parent parent14 d-flex justify-content-center align-items-center"><p class="bg_num">14</p></div>
+            <div class="parent parent13 d-flex justify-content-center align-items-center"><p class="bg_num">13</p></div>
+            <div class="parent parent12 d-flex justify-content-center align-items-center"><p class="bg_num">12</p></div>
+            <div class="parent parent11 d-flex justify-content-center align-items-center"><p class="bg_num">11</p></div>
+         
+             </div>
+
+        <div class="gameBox gameBox1 d-flex justify-content-center align-items-center">
+
+   <div class="parent parent1 d-flex justify-content-center align-items-center"><img src="./images/player_emoji.png" alt="player_reference" class="child" height="20px" width="20px"><p class="bg_num">1</p></div>
+   <div class="parent parent2 d-flex justify-content-center align-items-center"><p class="bg_num">2</p></div>
+   <div class="parent parent3 d-flex justify-content-center align-items-center"></div>
+   <div class="parent parent4 d-flex justify-content-center align-items-center"><p class="bg_num">4</p></div>
+   <div class="parent parent5 d-flex justify-content-center align-items-center"><p class="bg_num">5</p></div>
+   <div class="parent parent6 d-flex justify-content-center align-items-center"><p class="bg_num">6</p></div>
+   <div class="parent parent7 d-flex justify-content-center align-items-center"><p class="bg_num">7</p></div>
+   <div class="parent parent8 d-flex justify-content-center align-items-center"></div>
+   <div class="parent parent9 d-flex justify-content-center align-items-center"><p class="bg_num">9</p></div>
+   <div class="parent parent10 d-flex justify-content-center align-items-center"><p class="bg_num">10</p></div>
+
+             </div>
+
+    </div>
+
+    <!-- Dice Field -->
+    <div class="diceField container-fluid d-flex justify-content-center align-items-center mt-3">
+
+    <button type="button" class="button diceButton"><img src="./images/Dice Data/dice-1.png" alt="dice_Data" class="diceData img-fluid" width="50px" height="50px"></button>
+
+    </div>
+
+    <!-- Copyright Field -->
+    <div class="copyrightField container-fluid d-flex justify-content-center align-items-center mt-2">
+          <p class="copyrightText mt-2">© 2023 Escape The Snakes by Freedom Kumar</p>
+    </div>
+    </div>
+
+    <!-- Pause Window -->
+    <div class="pauseWindow container-fluid hidden flex-column gap-2 justify-content-start align-items-center mt-5">
+     <div class="subPause">
+        <div class="continue d-flex justify-content-center align-items-center mb-3">
+
+          <div class="icon continueIcon">
+            <i class="fa-solid fa-play fa-lg" style="color: #000000;"></i>
+          </div>
+
+          <div class="button ms-2">
+            <button class="button continueButton">Continue</button> 
+          </div>
+
+        </div>
+
+        <div class="restart d-flex justify-content-center align-items-center">
+          
+          <div class="icon restartIcon">
+            <i class="fa-solid fa-repeat fa-lg" style="color: #000000;"></i>
+          </div>
+    
+          <div class="button ms-2">
+            <button class="button restartButton">Restart</button> 
+          </div>
+
+        </div>
+     </div>
+    </div>
+
+    <!-- Finish Window -->
+    <div class="finishWindow container-fluid hidden flex-column gap-2 justify-content-between align-items-center mt-5">
+
+     <div class="finish d-flex flex-column justify-content-center align-items-center">
+
+       <div class="finishSummary d-flex flex-column justify-content-center align-items-center">
+      
+         <div class="icon finishIcon">
+
+          <img src="./images/Game Summary Images/win_image.png" alt="game_result_image" class="gameResultImage" width="200px" height="100px">
+          
+         </div>
+      
+        </div>
+      
+        <div class="newGameField d-flex flex-column justify-content-center align-items-center">
+                
+         <div class="newGame">
+
+            <button class="button newGametButton">New Game</button> 
+          
+         </div>
+
+         </div>
+
+        </div>
+
+    </div>
+
+    </script>
+    <script type="module" src="./js/ETS_game.js"></script>
+    
+</body>
+</html>
